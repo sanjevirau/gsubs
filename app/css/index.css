@@ -1,0 +1,563 @@
+/* ==========================================================================
+   General
+   ========================================================================== */
+
+html {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 300;
+    line-height: 23px;
+}
+
+body {
+    display: none;
+    user-select: none;
+}
+
+body ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 8px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+body ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, .1);
+    -webkit-transition: color .2s ease;
+    transition: color .2s ease;
+}
+
+body ::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, .35);
+    -webkit-transition: color .2s ease;
+    transition: color .2s ease;
+}
+
+body ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, .1);
+    border-radius: 5px;
+}
+
+.center {
+    display: block;
+    margin: auto;
+}
+
+.five.wide.column.top {
+    margin-top: 15px;
+}
+
+/* ==========================================================================
+   Main Content
+   ========================================================================== */
+
+.main-window {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background: linear-gradient(to bottom, #8241f9 0%, #7f40f2 52%, #4e277b 100%);
+    transition: all 0.5s ease;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+}
+
+/* Header
+   ========================================================================== */
+
+.container-top {
+    top: 0;
+    width: 100%;
+    height: 60px;
+    -webkit-app-region: drag;
+}
+
+/* Search area
+   ========================================================================== */
+
+.search-box {
+    width: 79%;
+    height: 45px;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    outline: none;
+    color: white;
+    margin-left: 5px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 23px;
+}
+
+.search-box-div {
+    transition: all 0.3s ease-out;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+::-webkit-input-placeholder {
+    color: white;
+    opacity: 0.5 !important;
+    font-family: 'Open Sans';
+    font-style: italic;
+    line-height: 23px;
+    font-weight: 300;
+}
+
+/* Drag and drop area
+   ========================================================================== */
+
+.zone {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.15);
+    width: 70%;
+    height: 43%;
+    border-radius: 50%;
+    border: 5px dotted white;
+    text-align: center;
+    color: white;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, .05), inset 0 0 .25em 0 rgba(0, 0, 0, .25);
+}
+
+.zone.in {
+    transition: all 0.3s ease-out;
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.zone.in i {
+    color: #fff;
+}
+
+.zone.in label {
+    background: #fff;
+    color: #EB6A5A;
+}
+
+.zone.hover {
+    transition: all 0.3s ease-out;
+    color: white;
+    border: none;
+    background: #fff;
+    width: 50%;
+    height: 31%;
+}
+
+.zone.hover i {
+    color: #EB6A5A;
+}
+
+.zone.hover label {
+    background: #fff;
+    color: #EB6A5A;
+}
+
+.zone.fade {
+    transition: all 0.3s ease-out;
+    opacity: 1;
+}
+
+.drag-caption {
+    margin-top: 100px;
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-size: 13px;
+    line-height: 23px;
+    font-weight: 100;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.drag-caption-add-one {
+    margin-top: 40px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 60px;
+    font-weight: 600;
+    background-image: -webkit-linear-gradient(top, #8241f9 0%, #7f40f2 52%, #4e277b 100%);
+    -webkit-background-clip: text;
+    position: relative;
+    display: inline-block;
+    -webkit-text-fill-color: transparent;
+    height: 80px;
+    line-height: normal;
+    display: none;
+}
+
+/* Dots animation
+   ========================================================================== */
+
+@keyframes blink {
+    /**
+     * At the start of the animation the dot
+     * has an opacity of .2
+     */
+    0% {
+        opacity: .2;
+    }
+    /**
+     * At 20% the dot is fully visible and
+     * then fades out slowly
+     */
+    20% {
+        opacity: 1;
+    }
+    /**
+     * Until it reaches an opacity of .2 and
+     * the animation can start again
+     */
+    100% {
+        opacity: .2;
+    }
+}
+
+.loading {
+    user-select: none;
+    pointer-events: none;
+    margin-top: 40px;
+    display: none;
+}
+
+.loading span {
+    /**
+     * Use the blink animation, which is defined above
+     */
+    animation-name: blink;
+    /**
+     * The animation should take 1.4 seconds
+     */
+    animation-duration: 1.4s;
+    /**
+     * It will repeat itself forever
+     */
+    animation-iteration-count: infinite;
+    /**
+     * This makes sure that the starting style (opacity: .2)
+     * of the animation is applied before the animation starts.
+     * Otherwise we would see a short flash or would have
+     * to set the default styling of the dots to the same
+     * as the animation. Same applies for the ending styles.
+     */
+    animation-fill-mode: both;
+    font-size: 100px;
+    color: #7f40f2;
+}
+
+.loading span:nth-child(2) {
+    /**
+     * Starts the animation of the third dot
+     * with a delay of .2s, otherwise all dots
+     * would animate at the same time
+     */
+    animation-delay: .2s;
+}
+
+.loading span:nth-child(3) {
+    /**
+     * Starts the animation of the third dot
+     * with a delay of .4s, otherwise all dots
+     * would animate at the same time
+     */
+    animation-delay: .4s;
+}
+
+.loading span:nth-child(4) {
+    /**
+     * Starts the animation of the third dot
+     * with a delay of .6s, otherwise all dots
+     * would animate at the same time
+     */
+    animation-delay: .6s;
+}
+
+/* Texts
+   ========================================================================== */
+
+.searching-sub {
+    pointer-events: none;
+    display: none;
+}
+
+.searching-sub-for {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-size: 12px;
+    line-height: 23px;
+    font-weight: 100;
+    color: white;
+    pointer-events: none;
+}
+
+.fail-to-find-text {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
+    color: white;
+    display: none;
+    pointer-events: none;
+}
+
+.searching-sub-video {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 600;
+    color: white;
+    pointer-events: none;
+}
+
+.title {
+    pointer-events: none;
+}
+
+/* Footer
+   ========================================================================== */
+
+.container-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+    background-image: url(../img/bottom-wave.svg);
+    background-repeat: no-repeat;
+}
+
+.ui.grid.bottom-adjust {
+    padding-top: 30px;
+}
+
+.ui.icon.button.big.paypal-icon {
+    padding-top: 17px;
+}
+
+.ui.loader {
+    margin-left: 8px;
+    left: auto;
+    top: auto;
+}
+
+.logo {
+    transition: all 0.3s ease-out;
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   Icons & buttons
+   ========================================================================== */
+
+.lnr-home {
+    color: #FFFFFF;
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-transition: all .03s ease-in;
+    -webkit-app-region: no-drag;
+}
+
+.lnr-home:hover {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+
+.lnr-arrow-left {
+    color: #FFFFFF;
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-transition: all .03s ease-in;
+    -webkit-app-region: no-drag;
+}
+
+.lnr-arrow-left:hover {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+
+.lnr-cross {
+    color: #FFFFFF;
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-transition: all .03s ease-in;
+    -webkit-app-region: no-drag;
+}
+
+.lnr-cross:hover {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+
+.lnr.lnr-magnifier.search-icon-adjust {
+    font-size: 14px;
+    opacity: 0.5;
+    color: white;
+    padding-left: 25px;
+}
+
+.lnr-download {
+    color: #FFFFFF;
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-transition: all .03s ease-in;
+    -webkit-app-region: no-drag;
+}
+
+.lnr-download:hover {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+
+.lnr-arrow-right {
+    color: #FFFFFF;
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-transition: all .03s ease-in;
+    -webkit-app-region: no-drag;
+}
+
+.lnr-arrow-right:hover {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-app-region: no-drag;
+}
+
+.lnr-checkmark-circle {
+    color: #FFFFFF;
+    font-size: 18px;
+    -webkit-transition: all .03s ease-in;
+    -webkit-app-region: no-drag;
+}
+
+.lnr-cross-circle {
+    color: #F51717;
+    font-size: 18px;
+    -webkit-transition: all .03s ease-in;
+    -webkit-app-region: no-drag;
+}
+
+.check-done {
+    margin-top: 40px;
+    position: relative;
+    height: 80px;
+    pointer-events: none;
+    display: none;
+}
+
+.sad-icon {
+    margin-top: 42px;
+    position: relative;
+    height: 80px;
+    pointer-events: none;
+    display: none;
+}
+
+.error-icon {
+    margin-top: 42px;
+    position: relative;
+    height: 80px;
+    pointer-events: none;
+    display: none;
+}
+
+#donate-button-id {
+    background: none;
+}
+
+#donate-button-id:hover {
+    background-color: #ddd;
+}
+
+#donate-button-id:focus {
+    background-color: #ccc;
+}
+
+#language-select-id {
+    background: none;
+}
+
+#language-select-id:hover {
+    background-color: #ddd;
+}
+
+#language-select-id:focus {
+    background-color: #ccc;
+}
+
+.play-button {
+    margin-top: 290px;
+    display: none;
+}
+
+.download-btn {
+    position: relative;
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+.result-table-div {
+    overflow-y: scroll;
+    height: 375px;
+    display: none;
+}
+
+table.result-table {
+    width: 100%;
+    margin-top: 10px;
+    color: #FFFFFF;
+    border-spacing: 0;
+    border-collapse: collapse;
+    transition: all 0.3s ease-out;
+    margin-bottom: 18px;
+}
+
+table.result-table td {
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+table.result-table tr {
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+table.result-table tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, .075);
+}
+
+table.result-table td:first-child {
+    width: 275px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+table.result-table td:nth-child(2) {
+    width: 55px;
+}

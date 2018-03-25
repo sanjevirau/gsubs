@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../css/open-sans.css">
+  <link rel="stylesheet" type="text/css" href="../css/semantic.min.css">
+  <link rel="stylesheet" href="../css/icon-font.min.css">
+  <link rel="stylesheet" href="../css/jquery-ui.min.css">
+  <link href="../css/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="main-window">
+
+    <div id="update-nag" class="ui inline nag">
+      <span class="title">New update is available.</span>
+      <button id="install-btn-id" class="positive small ui button">Install &amp; Restart</button>
+      <i class="close icon"></i>
+    </div>
+    <!-- Header content -->
+    <div class="container-top">
+      <div class="ui grid top-adjust">
+
+        <!-- Home button content -->
+        <div class="five wide column top">
+          <center>
+            <span id="home-button" class="lnr lnr-home"></span>
+          </center>
+        </div>
+
+        <div class="six wide column">
+        </div>
+
+        <!-- Exit button content -->
+        <div class="five wide column top">
+          <center>
+            <span id="close-button" class="lnr lnr-cross"></span>
+          </center>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div id="main" class="main">
+
+      <!-- Search box content -->
+      <div id="search-box-div-id" class="search-box-div">
+        <span class="lnr lnr-magnifier search-icon-adjust"></span>
+        <input type="text" id="search-box-id" class="search-box" placeholder="Search for subtitles here and press enter...">
+      </div>
+
+      <!-- Searching for single subtitle header -->
+      <div id="searching-sub-id" class="searching-sub">
+        <center>
+          <div id="searching-sub-for-id" class="searching-sub-for">Searching subtitle for</div>
+          <div id="searching-sub-video-id" class="searching-sub-video">Blade.Runner.2049.2017.1080p.WEB-DL.DD...</div>
+        </center>
+      </div>
+
+      <!-- Error finding subtitle message -->
+      <center>
+        <div id="fail-to-find-text-id" class="fail-to-find-text">Sorry, I couldn't find the subtitles. I understand I do fail sometimes, but that's our nature right?</div>
+      </center>
+
+      <!-- List of multiple results in table -->
+      <div id="result-table-id" class="result-table-div">
+        <table class="result-table">
+          <tbody id="result-tbody">
+          </tbody>
+        </table>
+      </div>
+
+      <!-- List of multiple results of deep search in table -->
+      <div id="deep-search-table-id" class="result-table-div">
+        <table class="result-table">
+          <tbody id="deep-result-tbody">
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Circular drag and drop area -->
+      <div class="zone">
+        <div id="drop-area">
+
+          <!-- Initial caption of drop zone -->
+          <div id="drag-caption-id" class="drag-caption">Drag a movie or episode here</div>
+
+          <!-- Number of files being dragged -->
+          <div id="drag-caption-id-add-one" class="drag-caption-add-one">+1</div>
+
+          <!-- Four dots loader screen -->
+          <p id="loading-id" class="loading">
+            <span>.</span>
+            <span>.</span>
+            <span>.</span>
+            <span>.</span>
+          </p>
+
+          <!-- Checkmark icon upon success single search -->
+          <div id="checkdone-id" class="check-done">
+            <img class="center" src="../img/check-done.svg" width="80px">
+          </div>
+
+          <!-- Sad face icon upon failed single search -->
+          <div id="sad-id" class="sad-icon">
+            <img class="center" src="../img/sad.svg" width="80px">
+          </div>
+
+          <!-- Attention icon upon error occurs when searching -->
+          <div id="error-id" class="error-icon">
+            <img class="center" src="../img/attention.svg" width="80px">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Play button content -->
+      <div id="play-button-id" class="play-button">
+        <center>
+          <div class="ui">
+            <button class="ui inverted button" onclick="$(this).blur();">
+              <i class="play icon"></i>
+              Play with subtitle</button>
+          </div>
+        </center>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer content -->
+  <div class="container-bottom">
+    <div class="ui grid bottom-adjust">
+
+      <!-- Donate button content -->
+      <div class="five wide column">
+        <center>
+          <button id="donate-button-id" class="ui icon button big paypal-icon" data-tooltip="Donate" onclick="$(this).blur();">
+            <i class="paypal icon"></i>
+          </button>
+        </center>
+      </div>
+
+      <!-- Logo content -->
+      <div class="six wide column">
+        <img id="logo" class="logo center" src="../img/logo-p.svg" width="80px">
+      </div>
+
+      <!-- Subtitle language selection content -->
+      <div class="five wide column">
+        <center>
+          <button id="language-select-id" class="ui dropdown button icon big top left pointing  language-select">
+            <i id="flag-shown-id" class="us flag"></i>
+            <div class="menu" onclick="$('#language-select-id').blur();">
+              <div class="header">Choose Language</div>
+              <div class="item" data-value="en">
+                <i class="us flag"></i>English</div>
+              <div class="item" data-value="es">
+                <i class="es flag"></i>Español</div>
+              <div class="item" data-value="fr">
+                <i class="fr flag"></i>Français</div>
+              <div class="item" data-value="it">
+                <i class="it flag"></i>Italiano</div>
+              <div class="item" data-value="nl">
+                <i class="nl flag"></i>Nederlands</div>
+              <div class="item" data-value="pl">
+                <i class="pl flag"></i>Polski</div>
+              <div class="item" data-value="pt">
+                <i class="pt flag"></i>Português</div>
+              <div class="item" data-value="ro">
+                <i class="ro flag"></i>Român</div>
+              <div class="item" data-value="sv">
+                <i class="sv flag"></i>Svenska</div>
+              <div class="item" data-value="tr">
+                <i class="tr flag"></i>Türkçe</div>
+            </div>
+          </button>
+        </center>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Renderer file -->
+  <script src="../renderer/index.js"></script>
+
+  <!-- Included in order to make jQuery work 
+  More info : https://electronjs.org/docs/faq#i-can-not-use-jqueryrequirejsmeteorangularjs-in-electron
+  -->
+  <script>
+    window.nodeRequire = require;
+    delete window.require;
+    delete window.exports;
+    delete window.module;
+  </script>
+
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <script src="../js/semantic.min.js"></script>
+
+  <!-- To make subtitle language selection dropdown to work -->
+  <script>
+    $('.ui.dropdown').dropdown();
+  </script>
+
+</body>
+
+</html>

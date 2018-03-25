@@ -1,0 +1,23 @@
+appId: com.cholaware.gsubs
+productName: gSubs
+copyright: Copyright © 2018 Cholaware
+dmg:
+  contents:
+    - x: 110
+      y: 150
+    - x: 240
+      y: 150
+      type: link
+      path: /Applications
+linux:
+  category: Utility
+  target:
+    - AppImage
+    - deb
+win:
+  target: nsis
+  icon: build/icon.ico
+  publish:
+    - provider: github
+nsis:
+  perMachine: true

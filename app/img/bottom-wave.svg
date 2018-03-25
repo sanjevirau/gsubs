@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="433 -273.236 360 94.252">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" y1="-0.342" x2="0.514" y2="1.247" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.65" stop-color="#efefef"/>
+      <stop offset="1" stop-color="#e9e9e9"/>
+    </linearGradient>
+  </defs>
+  <path id="bottom-wave" data-name="bottom-wave" class="cls-1" d="M0,12.761s94.018,28.713,178.414,0,181.586,0,181.586,0V94.252H0Z" transform="translate(433 -273.236)"/>
+</svg>
