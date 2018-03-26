@@ -1,9 +1,10 @@
 <h1 align="center">
   <img src="http://cholaware.com/assets/img/gSubs/logo.svg" width="120" alt="gSubs Logo" draggable="false"><br>
-  <br>
+<br>
 </h1>
 
 <p align="center">  
+<br>
   <img src="http://cholaware.com/assets/img/gsubs_preview.gif"  alt="banner" draggable="false">
   <br>
   <h5 align="center">INTRODUCTION</h5>
