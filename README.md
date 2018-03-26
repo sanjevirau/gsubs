@@ -11,7 +11,19 @@
  gSubs is multi-platform, open-source, and built entirely on web technology.</p>
   <p align="center"><a href="https://cholaware.com/gsubs">Download gSubs</a></p>
   <p align="center">
-[![Github Releases](https://img.shields.io/github/downloads/sanjevirau/gsubs/total/total.svg)](https://github.com/sanjevirau/gsubs)[![GitHub stars](https://img.shields.io/github/stars/sanjevirau/gsubs.svg)](https://github.com/sanjevirau/gsubs/stargazers)[![GitHub forks](https://img.shields.io/github/forks/sanjevirau/gsubs.svg)](https://github.com/sanjevirau/gsubs/network)[![GitHub issues](https://img.shields.io/github/issues/sanjevirau/gsubs.svg)](https://github.com/sanjevirau/gsubs/issues)[![GitHub license](https://img.shields.io/github/license/sanjevirau/gsubs.svg)](https://github.com/sanjevirau/gsubs/blob/master/LICENSE)[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/sanjevirau)[![Twitter](https://img.shields.io/twitter/url/https/github.com/sanjevirau/gsubs.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fsanjevirau%2Fgsubs)
+
+  <a href="" alt="Downloads"><img src="https://img.shields.io/github/downloads/sanjevirau/gsubs/total/total.svg" /></a>
+
+  <a href="https://github.com/sanjevirau/gsubs/stargazers" alt="Stars"><img src="https://img.shields.io/github/stars/sanjevirau/gsubs.svg" /></a>
+
+  <a href="https://github.com/sanjevirau/gsubs/network" alt="Forks"><img src="https://img.shields.io/github/forks/sanjevirau/gsubs.svg" /></a>
+
+  <a href="https://github.com/sanjevirau/gsubs/issues" alt="Issues"><img src="https://img.shields.io/github/issues/sanjevirau/gsubs.svg" /></a>
+
+  <a href="https://github.com/sanjevirau/gsubs/blob/master/LICENSE" alt="License"><img src="https://img.shields.io/github/license/sanjevirau/gsubs.svg" /></a>
+
+  <a href="https://paypal.me/sanjevirau" alt="License"><img src="https://img.shields.io/badge/Donate-PayPal-green.svg" /></a>
+
   </p>
 </p>
 
@@ -90,7 +102,8 @@ If this project helps you in any way making your life easier, you can give us so
 </br>
 
 <p align="center">  
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.me/sanjevirau)
+  <a href="https://www.paypal.me/sanjevirau" alt="Paypal"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" /></a>
+
 </p>
 </br>
 
