@@ -11,25 +11,7 @@
  gSubs is multi-platform, open-source, and built entirely on web technology.</p>
   <p align="center"><a href="https://cholaware.com/gsubs">Download gSubs</a></p>
   <p align="center">
-
-
-[![Github Releases](https://img.shields.io/github/downloads/sanjevirau/gsubs/total/total.svg)](https://github.com/sanjevirau/gsubs)
-
-[![GitHub stars](https://img.shields.io/github/stars/sanjevirau/gsubs.svg)](https://github.com/sanjevirau/gsubs/stargazers)
-
-
-[![GitHub forks](https://img.shields.io/github/forks/sanjevirau/gsubs.svg)](https://github.com/sanjevirau/gsubs/network)
-
-
-[![GitHub issues](https://img.shields.io/github/issues/sanjevirau/gsubs.svg)](https://github.com/sanjevirau/gsubs/issues)
-
-[![GitHub license](https://img.shields.io/github/license/sanjevirau/gsubs.svg)](https://github.com/sanjevirau/gsubs/blob/master/LICENSE)
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/sanjevirau)
-
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/sanjevirau/gsubs.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fsanjevirau%2Fgsubs)
-
-
+[![Github Releases](https://img.shields.io/github/downloads/sanjevirau/gsubs/total/total.svg)](https://github.com/sanjevirau/gsubs)[![GitHub stars](https://img.shields.io/github/stars/sanjevirau/gsubs.svg)](https://github.com/sanjevirau/gsubs/stargazers)[![GitHub forks](https://img.shields.io/github/forks/sanjevirau/gsubs.svg)](https://github.com/sanjevirau/gsubs/network)[![GitHub issues](https://img.shields.io/github/issues/sanjevirau/gsubs.svg)](https://github.com/sanjevirau/gsubs/issues)[![GitHub license](https://img.shields.io/github/license/sanjevirau/gsubs.svg)](https://github.com/sanjevirau/gsubs/blob/master/LICENSE)[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/sanjevirau)[![Twitter](https://img.shields.io/twitter/url/https/github.com/sanjevirau/gsubs.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fsanjevirau%2Fgsubs)
   </p>
 </p>
 
