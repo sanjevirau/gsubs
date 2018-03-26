@@ -1,11 +1,11 @@
 <h1 align="center">
-  <img src="http://cholaware.com/assets/img/gSubs/logo.svg" width="120" alt="gSubs Logo" draggable="false"><br>
+  <img href="https://cholaware.com/gsubs" src="http://cholaware.com/assets/img/gSubs/logo.svg" width="120" alt="gSubs Logo" draggable="false"><br>
 <br>
 </h1>
 
 <p align="center">  
 <br>
-  <img src="http://cholaware.com/assets/img/gsubs_preview.gif"  alt="banner" draggable="false">
+  <img href="https://cholaware.com/gsubs" src="http://cholaware.com/assets/img/gsubs_preview.gif"  alt="banner" draggable="false">
   <br>
   <h5 align="center">INTRODUCTION</h5>
   <p align="center">Meet gSubs. <br> A desktop app that finds you the perfect subtitle match for your videos. Simply download now and drag and drop videos to get started.
