@@ -41,6 +41,8 @@ gSubs are capable of finding you subtitles for 10 languages which are English, E
 #### Auto Update
 gSubs have auto update feature included in it. This means you don't have to manually download the latest release every time. gSubs downloads and installs the latest release automatically.
 
+<br>
+
 ## ⚡️ Contributing
 
 gSubs is completely open-source. If you'd like to help out by adding features, working on bug fixes,
