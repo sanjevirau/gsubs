@@ -11,19 +11,12 @@
  gSubs is multi-platform, open-source, and built entirely on web technology.</p>
   <p align="center"><a href="https://cholaware.com/gsubs">Download gSubs</a></p>
   <p align="center">
-
   <a href="" alt="Downloads"><img src="https://img.shields.io/github/downloads/sanjevirau/gsubs/total/total.svg" /></a>
-
   <a href="https://github.com/sanjevirau/gsubs/stargazers" alt="Stars"><img src="https://img.shields.io/github/stars/sanjevirau/gsubs.svg" /></a>
-
   <a href="https://github.com/sanjevirau/gsubs/network" alt="Forks"><img src="https://img.shields.io/github/forks/sanjevirau/gsubs.svg" /></a>
-
   <a href="https://github.com/sanjevirau/gsubs/issues" alt="Issues"><img src="https://img.shields.io/github/issues/sanjevirau/gsubs.svg" /></a>
-
   <a href="https://github.com/sanjevirau/gsubs/blob/master/LICENSE" alt="License"><img src="https://img.shields.io/github/license/sanjevirau/gsubs.svg" /></a>
-
   <a href="https://paypal.me/sanjevirau" alt="License"><img src="https://img.shields.io/badge/Donate-PayPal-green.svg" /></a>
-
   </p>
 </p>
 
