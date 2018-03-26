@@ -11,7 +11,7 @@
  gSubs is multi-platform, open-source, and built entirely on web technology.</p>
   <p align="center"><a href="https://cholaware.com/gsubs">Download gSubs</a></p>
   <p align="center">
-  <a href="" alt="Downloads"><img src="https://img.shields.io/github/downloads/sanjevirau/gsubs/total/total.svg" /></a>
+  <a href="https://github.com/sanjevirau/gsubs/releases" alt="Downloads"><img src="https://img.shields.io/github/downloads/sanjevirau/gsubs/total/total.svg" /></a>
   <a href="https://github.com/sanjevirau/gsubs/stargazers" alt="Stars"><img src="https://img.shields.io/github/stars/sanjevirau/gsubs.svg" /></a>
   <a href="https://github.com/sanjevirau/gsubs/network" alt="Forks"><img src="https://img.shields.io/github/forks/sanjevirau/gsubs.svg" /></a>
   <a href="https://github.com/sanjevirau/gsubs/issues" alt="Issues"><img src="https://img.shields.io/github/issues/sanjevirau/gsubs.svg" /></a>
@@ -26,19 +26,19 @@
 The following features made what gSubs is today and many more features will be, hopefully added with the support of great open source community in the future.
 </br>
 </br>
-###### Drag & Drop
+#### Drag & Drop
 Just drag and drop the video files that you want to search subtitle for and gSubs will do it's job. No more browsing and selecting videos from the mysteries directories that you don't know.
 
-###### Multiple Files
+#### Multiple Files
 gSubs supports multiple files input, meaning you can drag and drop as many files as you want and gSubs will find subtitles for each and every file. You have an entire season with dozen of episodes? gSubs gets your subtitles for the entire season in one time.
 
-###### Search Subtitles
+#### Search Subtitles
 You don't have a video file but just want to donwload your favourite movies or series subtitles? Don't worry, gSubs consists of the search function where you can input any queries for search. gSubs will give you the results according to the language that has been set.
 
-###### 10 Languages
+#### 10 Languages
 gSubs are capable of finding you subtitles for 10 languages which are English, Español, Français, Italiano, Nederlands, Polski, Português, Român, Svenska and Türkçe. Many more languages will be added soon.
 
-###### Auto Update
+#### Auto Update
 gSubs have auto update feature included in it. This means you don't have to manually download the latest release every time. gSubs downloads and installs the latest release automatically.
 
 ## ⚡️ Contributing
