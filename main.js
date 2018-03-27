@@ -19,6 +19,7 @@ let mainWindow; // this will store the window object
 function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
+    title: "gSubs",
     width: 344,
     height: 540,
     resizable: false,
