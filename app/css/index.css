@@ -284,7 +284,7 @@ body ::-webkit-scrollbar-track {
    ========================================================================== */
 
 .searching-sub {
-    pointer-events: none;
+    cursor: pointer;
     display: none;
 }
 
@@ -319,7 +319,7 @@ body ::-webkit-scrollbar-track {
     line-height: 23px;
     font-weight: 600;
     color: white;
-    pointer-events: none;
+    cursor: default;
 }
 
 .title {
