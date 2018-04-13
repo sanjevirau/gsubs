@@ -274,6 +274,7 @@ $(document).on({
 
           // Show the subtitle searching loading page
           $('#searching-sub-video-id').text(nameLabel);
+          $('#searching-sub-video-id').attr('title', fullName);
           $("#searching-sub-for-id").text("Searching subtitle for");
           $("#searching-sub-id").fadeIn("slow");
           $('#searching-sub-video-id').fadeIn("slow");
@@ -333,12 +334,12 @@ function multiSearchLoading(callback, token) {
 
     // If valid video file format, add to table and create CheckSubtitle intance
     if (validateVideoFileExtension(fullName)) {
-      $("#result-tbody").append('<tr><td>' + fullName + '</td><td><div id="futher-search' + index + '" class="further-search-btn"><div class="ui small active inverted loader"></div></div></td></tr>');
+      $("#result-tbody").append('<tr><td title="' + fullName + '">' + fullName + '</td><td><div id="futher-search' + index + '" class="further-search-btn"><div class="ui small active inverted loader"></div></div></td></tr>');
       objs.push(new CheckSubtitle(fullName, filePath, store.get('lang'), index));
       global.multifilesnum++;
 
     } else {
-      $("#result-tbody").append('<tr><td style="text-decoration: line-through;">' + fullName + '</td><td><span class="lnr lnr-cross-circle"></span></td></tr>');
+      $("#result-tbody").append('<tr><td style="text-decoration: line-through;" title="' + fullName + '">' + fullName + '</td><td><span class="lnr lnr-cross-circle"></span></td></tr>');
     }
 
   });
@@ -438,7 +439,7 @@ function showPartialSuccessPage(result, filePath, token) {
           var subURL = this.url;
           // The subtitle will be downloaded to the same path as the video file
           var subPath = path.join(path.dirname(filePath), fileName);
-          $("#result-tbody").append('<tr><td>' + fileName + '</td><td><div id="download-button"  class="download-btn" data-url="' + subURL + '" data-fullpath="' + subPath + '"><span class="lnr lnr-download"></span></div></td></tr>');
+          $("#result-tbody").append('<tr><td title="' + fileName + '">' + fileName + '</td><td><div id="download-button"  class="download-btn" data-url="' + subURL + '" data-fullpath="' + subPath + '"><span class="lnr lnr-download"></span></div></td></tr>');
         });
       });
     } else {
@@ -498,7 +499,7 @@ function showQuerySuccessPage(result, token) {
           var fileName = this.filename;
           var subURL = this.url;
           var subPath = path.join(os.homedir(), 'Desktop', fileName);
-          $("#result-tbody").append('<tr><td>' + fileName + '</td><td><div id="download-button"  class="download-btn" data-url="' + subURL + '" data-query="yes" data-fullpath="' + subPath + '"><span class="lnr lnr-download"></span></div></td></tr>');
+          $("#result-tbody").append('<tr><td title="' + fileName + '">' + fileName + ' </td><td><div id="download-button" data-tooltip="Go to Facebook" class="download-btn" data-url="' + subURL + '" data-query="yes" data-fullpath="' + subPath + '"><span class="lnr lnr-download"></span></div></td></tr>');
         });
       });
     } else {
@@ -572,7 +573,7 @@ function showDeepSearchSuccessPage(result, filePath) {
           var subURL = this.url;
           // The subtitle will be downloaded to the same path as the video file
           var subPath = path.join(path.dirname(filePath), fileName);
-          $("#deep-result-tbody").append('<tr><td>' + fileName + '</td><td><div id="download-button"  class="download-btn" data-url="' + subURL + '" data-fullpath="' + subPath + '"><span class="lnr lnr-download"></span></div></td></tr>');
+          $("#deep-result-tbody").append('<tr><td title="' + fileName + '">' + fileName + '</td><td><div id="download-button"  class="download-btn" data-url="' + subURL + '" data-fullpath="' + subPath + '"><span class="lnr lnr-download"></span></div></td></tr>');
         });
       });
     } else {
@@ -689,6 +690,8 @@ function singleDeepCheck(filePathIn, successCB, errorCB) {
 
   setTimeout(function () {
     $('#searching-sub-video-id').text(nameLabel);
+    $('#searching-sub-video-id').attr('title', fileNameWithExtension);
+
     $('#searching-sub-video-id').fadeIn("slow");
     if ($('.zone').hasClass('hidden')) {
       $('.zone').transition('scale');
