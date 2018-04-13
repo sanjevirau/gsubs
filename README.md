@@ -75,7 +75,7 @@ gSubs currently uses 2 sources to gather subtitles. When user drag and drop the 
 
 * [x] SubDB
 * [x] OpenSubtitles
-* [] Addic7ed
+* [ ] Addic7ed
 
 <br>
 
