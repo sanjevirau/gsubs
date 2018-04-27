@@ -499,7 +499,7 @@ function showQuerySuccessPage(result, token) {
           var fileName = this.filename;
           var subURL = this.url;
           var subPath = path.join(os.homedir(), 'Desktop', fileName);
-          $("#result-tbody").append('<tr><td title="' + fileName + '">' + fileName + ' </td><td><div id="download-button" data-tooltip="Go to Facebook" class="download-btn" data-url="' + subURL + '" data-query="yes" data-fullpath="' + subPath + '"><span class="lnr lnr-download"></span></div></td></tr>');
+          $("#result-tbody").append('<tr><td title="' + fileName + '">' + fileName + ' </td><td><div id="download-button" class="download-btn" data-url="' + subURL + '" data-query="yes" data-fullpath="' + subPath + '"><span class="lnr lnr-download"></span></div></td></tr>');
         });
       });
     } else {
