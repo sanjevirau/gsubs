@@ -4,7 +4,7 @@
 
 const CheckSubtitle = require('../renderer/checksub.js');
 const remote = require('electron').remote;
-const dialog = require('electron').remote.dialog; 
+const dialog = require('electron').remote.dialog;
 const Store = require('electron-store');
 const OS = require('opensubtitles-api');
 const OpenSubtitles = new OS({
@@ -24,6 +24,8 @@ var SubDb = require("subdb");
 
 global.store = new Store();
 global.globalToken = "";
+global.multiindex = 0;
+
 var deepSearchToken = "";
 var subdb = new SubDb();
 
@@ -33,7 +35,7 @@ $(document).ready(function () {
 });
 
 // When updateReady message income
-ipcRenderer.on('updateReady', function(event, text) {
+ipcRenderer.on('updateReady', function (event, text) {
   console.log("triggered updateReady");
   // changes the text of the button
   $('#update-nag').nag('show');
@@ -257,8 +259,8 @@ $(document).on({
 
     //Check if files are being dropped in the home page using global token
     if (global.globalToken == "") {
-      // If a single file is being added
-      if (event.dataTransfer.files.length == 1) {
+      // If a single file is being added and it is not a directory
+      if (event.dataTransfer.files.length == 1 && event.dataTransfer.items[0].webkitGetAsEntry().isFile) {
         // Validate if it's a valid video file
         if (validateVideoFileExtension(event.dataTransfer.files[0].name)) {
           var nameLabel;
@@ -323,31 +325,51 @@ $(document).on({
   }
 });
 
+//Recursive process to go through all folders to find video files
+function traverseFileTree(item, path, token) {
+  path = path || "";
+  if (item.isFile) {
+    // Get file
+    item.file(function (val) {
+      var fullName = val.name;
+      var filePath = val.path;
+
+      // If valid video file format, add to table and create CheckSubtitle intance
+      if (validateVideoFileExtension(fullName)) {
+        global.multiindex++;
+        $("#result-tbody").append('<tr><td title="' + fullName + '">' + fullName + '</td><td><div id="futher-search' + global.multiindex + '" class="further-search-btn"><div class="ui small active inverted loader"></div></div></td></tr>');
+
+        var newCheckSub = new CheckSubtitle(fullName, filePath, store.get('lang'), global.multiindex);
+        
+        newCheckSub.checkSubMulti(showErrorPageMulti, showSuccessPageMulti, showPartialSuccessPageMulti, token);
+
+        global.multifilesnum++;
+      } 
+
+    });
+  } else if (item.isDirectory) {
+    // Get folder contents
+    var dirReader = item.createReader();
+    dirReader.readEntries(function (entries) {
+      $.each(entries, function (index, val) {
+        traverseFileTree(val, path + item.name + "/", token);
+      });
+    });
+  }
+}
+
 // Function to validate and execute subtitle search for multiple files
 function multiSearchLoading(callback, token) {
-  var objs = [];
+  global.multiindex = 0;
 
   // Loop through each files being added
-  $.each(event.dataTransfer.files, function (index, val) {
-    var fullName = val.name;
-    var filePath = val.path;
-
-    // If valid video file format, add to table and create CheckSubtitle intance
-    if (validateVideoFileExtension(fullName)) {
-      $("#result-tbody").append('<tr><td title="' + fullName + '">' + fullName + '</td><td><div id="futher-search' + index + '" class="further-search-btn"><div class="ui small active inverted loader"></div></div></td></tr>');
-      objs.push(new CheckSubtitle(fullName, filePath, store.get('lang'), index));
-      global.multifilesnum++;
-
-    } else {
-      $("#result-tbody").append('<tr><td style="text-decoration: line-through;" title="' + fullName + '">' + fullName + '</td><td><span class="lnr lnr-cross-circle"></span></td></tr>');
+  $.each(event.dataTransfer.items, function (index, val) {
+    var item = val.webkitGetAsEntry();
+    if (item) {
+      traverseFileTree(item, "", token);
     }
-
   });
 
-  // Execute subtitle scanning for each video files
-  for (var i = 0; i < objs.length; i++) {
-    objs[i].checkSubMulti(showErrorPageMulti, showSuccessPageMulti, showPartialSuccessPageMulti, token);
-  }
 
   // If global token is still valid, then call back
   if (globalToken == token && globalToken.length != 0) {
@@ -748,7 +770,7 @@ $('body').on('click', 'div.download-btn', function () {
 
       // Create a file stream
       var file = fs.createWriteStream(fileName);
-      
+
       // Start request to download
       var request = https.get(downloadURL, function (response) {
 
