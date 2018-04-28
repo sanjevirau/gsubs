@@ -7,8 +7,8 @@
     "postinstall": "electron-builder install-app-deps",
     "start": "electron .",
     "pack": "build --dir",
-    "dist": "build -w --config",
-    "ship:linux": "build -wlm -p always"
+    "dist:win": "build -w --config",
+    "ship:all": "build -wlm -p always"
   },
   "repository": "https://github.com/sanjevirau/gsubs",
   "homepage": "https://cholaware.com/gsubs",
