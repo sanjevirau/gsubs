@@ -25,7 +25,8 @@ function createWindow() {
     resizable: false,
     frame: false,
     maximizable: false,
-    fullscreenable: false
+    fullscreenable: false,
+    icon: path.join(__dirname, '/build/icon.png')
   });
 
   // and load the index.html of the app.

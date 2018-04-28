@@ -7,18 +7,19 @@
     "postinstall": "electron-builder install-app-deps",
     "start": "electron .",
     "pack": "build --dir",
-    "dist": "build -w --config"
+    "dist": "build -w --config",
+    "ship:linux": "build -wlm -p always"
   },
   "repository": "https://github.com/sanjevirau/gsubs",
   "homepage": "https://cholaware.com/gsubs",
   "keywords": [
-    "gsubs",
+    "gSubs",
     "subtitle finder",
     "movie subtitle",
     "series subtitle",
     "subtitle searcher"
   ],
-  "author": "Cholaware",
+  "author": "Sanjevi Rau <sanjevi25@hotmail.com>",
   "license": "MIT",
   "devDependencies": {
     "electron": "~1.8.2",
