@@ -14,6 +14,7 @@ linux:
   target:
     - AppImage
     - deb
+    - rpm
 win:
   target: nsis
   icon: build/icon.ico
