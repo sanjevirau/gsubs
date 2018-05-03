@@ -5,7 +5,7 @@ dmg:
   contents:
     - x: 110
       y: 150
-    - x: 240
+    - x: 400
       y: 150
       type: link
       path: /Applications
