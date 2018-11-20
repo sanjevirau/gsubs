@@ -136,11 +136,20 @@ body ::-webkit-scrollbar-track {
     width: 70%;
     height: 43%;
     border-radius: 50%;
-    border: 5px dotted white;
+    /*border: 5px dotted white;*/
     text-align: center;
     color: white;
     transition: all 0.3s ease-out;
     box-shadow: 0 0 0 1px rgba(255, 255, 255, .05), inset 0 0 .25em 0 rgba(0, 0, 0, .25);
+}
+
+.zone-border {
+    position: absolute;
+    top: -11px;
+    left: -11px;
+    width: calc(100% + 22px);
+    height: calc(100% + 22px);
+    pointer-events: none;
 }
 
 .zone.in {
