@@ -2,6 +2,11 @@
    General
    ========================================================================== */
 
+html, body {
+    overflow: hidden;
+    background: transparent;
+}
+
 html {
     font-family: "Open Sans";
     font-style: normal;
@@ -13,6 +18,7 @@ html {
 body {
     display: none;
     user-select: none;
+    border-radius: 15px;
 }
 
 body ::-webkit-scrollbar {
@@ -45,6 +51,14 @@ body ::-webkit-scrollbar-track {
 .center {
     display: block;
     margin: auto;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
 }
 
 .five.wide.column.top {
@@ -336,6 +350,7 @@ body ::-webkit-scrollbar-track {
     height: 90px;
     background-image: url(../img/bottom-wave.svg);
     background-repeat: no-repeat;
+    border-radius: 15px;
 }
 
 .ui.grid.bottom-adjust {
@@ -367,6 +382,7 @@ body ::-webkit-scrollbar-track {
     cursor: pointer;
     -webkit-transition: all .03s ease-in;
     -webkit-app-region: no-drag;
+    margin-left: 25px;
 }
 
 .lnr-home:hover {
@@ -397,6 +413,7 @@ body ::-webkit-scrollbar-track {
     cursor: pointer;
     -webkit-transition: all .03s ease-in;
     -webkit-app-region: no-drag;
+    margin-right: 25px;
 }
 
 .lnr-cross:hover {
