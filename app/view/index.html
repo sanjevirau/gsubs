@@ -23,20 +23,16 @@
       <div class="ui grid top-adjust">
 
         <!-- Home button content -->
-        <div class="five wide column top">
-          <center>
-            <span id="home-button" class="lnr lnr-home"></span>
-          </center>
+        <div class="five wide column top text-left">
+          <span id="home-button" class="lnr lnr-home"></span>
         </div>
 
         <div class="six wide column">
         </div>
 
         <!-- Exit button content -->
-        <div class="five wide column top">
-          <center>
-            <span id="close-button" class="lnr lnr-cross"></span>
-          </center>
+        <div class="five wide column top text-right">
+          <span id="close-button" class="lnr lnr-cross"></span>
         </div>
 
       </div>
@@ -82,6 +78,9 @@
 
       <!-- Circular drag and drop area -->
       <div class="zone">
+        <svg class="zone-border" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <circle cx="50" cy="50" r="48" stroke="#fff" stroke-width="2.2" stroke-dasharray="0 5.48" stroke-linecap="round" fill="transparent"></circle>
+        </svg>
         <div id="drop-area">
 
           <!-- Initial caption of drop zone -->
@@ -186,7 +185,7 @@
   <!-- Renderer file -->
   <script src="../renderer/index.js"></script>
 
-  <!-- Included in order to make jQuery work 
+  <!-- Included in order to make jQuery work
   More info : https://electronjs.org/docs/faq#i-can-not-use-jqueryrequirejsmeteorangularjs-in-electron
   -->
   <script>

@@ -24,6 +24,7 @@ function createWindow() {
     height: 540,
     resizable: false,
     frame: false,
+    transparent: true,
     maximizable: false,
     fullscreenable: false,
     icon: path.join(__dirname, '/build/icon.png')
@@ -45,7 +46,7 @@ function createWindow() {
   });
 
   // Open the DevTools.
-  //mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 
 }
 
