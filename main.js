@@ -27,7 +27,9 @@ function createWindow() {
     transparent: true,
     maximizable: false,
     fullscreenable: false,
-    icon: path.join(__dirname, '/build/icon.png')
+    webPreferences: {
+      nodeIntegration: true
+    }
   });
 
   // and load the index.html of the app.
@@ -46,7 +48,7 @@ function createWindow() {
   });
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 
 }
 
