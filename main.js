@@ -27,7 +27,10 @@ function createWindow() {
     transparent: true,
     maximizable: false,
     fullscreenable: false,
-    icon: path.join(__dirname, '/build/icon.png')
+    icon: path.join(__dirname, '/build/icon.png'),
+    webPreferences: {
+      nodeIntegration: true
+    }
   });
 
   // and load the index.html of the app.
