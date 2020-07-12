@@ -1,6 +1,6 @@
 {
   "name": "gsubs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Finds you the perfect subtitle match",
   "main": "main.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "electron-store": "^1.3.0",
     "electron-updater": "^2.21.1",
     "jquery": "^3.3.1",
-    "opensubtitles-api": "^4.0.0",
+    "opensubtitles-api": "^5.1.2",
     "subdb": "0.0.3"
   }
 }
