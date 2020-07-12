@@ -20,7 +20,7 @@
     "series subtitle",
     "subtitle searcher"
   ],
-  "author": "Sanjevi Rau <sanjevi25@hotmail.com>",
+  "author": "Cholaware <support@cholawre.com>",
   "license": "MIT",
   "devDependencies": {
     "electron": "~9.1.0",
