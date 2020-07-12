@@ -18,7 +18,7 @@ html {
 body {
     display: none;
     user-select: none;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 body ::-webkit-scrollbar {
@@ -368,7 +368,7 @@ body ::-webkit-scrollbar-track {
     height: 90px;
     background-image: url(../img/bottom-wave.svg);
     background-repeat: no-repeat;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .ui.grid.bottom-adjust {

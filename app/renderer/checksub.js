@@ -1,8 +1,10 @@
 const util = require('util');
 const OS = require('opensubtitles-api');
 const OpenSubtitles = new OS({
-    useragent: 'TemporaryUserAgent',
-    ssl: true
+    useragent: 'gsubs',
+    username: 'gsubs',
+    password: '2e6600434b69735881a7ebe19ffc59ee',
+    ssl: true,
 });
 
 class CheckSubtitle {
@@ -12,6 +14,7 @@ class CheckSubtitle {
         this.language = lang;
         this.index = indexNum;
     }
+
     // Function to check subtitle for single video file
     checkSubSingle(errorCall, failureCall, successCall, partialSuccessCall, token) {
         var fileNameIn = this.fileName;
@@ -20,7 +23,7 @@ class CheckSubtitle {
 
         // Subtitle path variable same as video file name
         var subPath = path.join(path.dirname(filePathIn), path.basename(filePathIn, path.extname(fileNameIn)) + ".srt");
-        
+
         // Execute normal search using subdb
         // Generate hash for the specified file
         subdb.computeHash(filePathIn, function (err, res) {
@@ -75,6 +78,7 @@ class CheckSubtitle {
             });
         });
     }
+
     // Function to check subtitle for multiple video files
     checkSubMulti(errorCall, successCall, partialSuccessCall, token) {
         var fileNameIn = this.fileName;
@@ -158,4 +162,5 @@ function languageCodeto3Letter(lang) {
             break;
     }
 }
+
 module.exports = CheckSubtitle;
