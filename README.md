@@ -63,7 +63,7 @@ or assisting in other parts of development, here's how to get started:
    dist`
 6. gSubs can also be build into Mac and Linux by change the `dist` script to `build -wlm --config` in the `package.json` file and then building the app using `npm run dist`
 
-We does give you credits for your contributions. Every contributors name will be shown in our contributors page at [gSubs Contributors](http://cholaware.com/gsubs/contributors.html).
+We does give you credits for your contributions. Every contributors name will be shown in our contributors page at [gSubs Contributors](http://cholaware.com/gsubs/contributors.php).
 
 <br>
 
